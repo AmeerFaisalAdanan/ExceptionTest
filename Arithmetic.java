@@ -13,13 +13,14 @@ public class Arithmetic
    
     }
     
-    public boolean isCeiling(int newamt)
+    public boolean isCeiling(int newamt) throws ArithmeticException
     {        
         amt = newamt;
         //ArithmeticException atc = new ArithmeticException();
         if (amt > limit)
         {
-            return false;
+            //return false;
+            throw new ArithmeticException("Temperature "+amt+" Exceed Limit");
         }
         else
         {

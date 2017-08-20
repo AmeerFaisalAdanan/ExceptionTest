@@ -17,12 +17,17 @@ public class TestArithmetic
     public static void main(String[] args)
     {
         int limit = 100;
+        //int amt = 300;
         int amt = 99;
         Arithmetic atc = new Arithmetic(limit);
-        if(atc.isCeiling(amt))
-        {
+        try{
+            atc.isCeiling(amt);
             System.out.println("Valve is ok");
+            }  
+        catch (ArithmeticException ex)
+        {
+            System.err.print(ex);
         }
-        
     }
+        
 }
